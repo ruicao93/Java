@@ -1,0 +1,102 @@
+--
+-- Create database
+--
+create database onlinetrading;
+
+--
+--Use the Database
+--
+use onlinetrading;
+
+--
+-- Table structure for table `goods`
+--
+
+CREATE TABLE goods (
+  GoodsID bigint(20) NOT NULL auto_increment,
+  BuyNumber bigint(20) default '1',
+  UserID bigint(20) NOT NULL default '0',
+  WareID bigint(20) NOT NULL default '0',
+  CreateTime datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (GoodsID),
+  UNIQUE KEY GoodsID (GoodsID)
+) ;
+
+--
+-- Dumping data for table `goods`
+--
+
+--
+-- Table structure for table `sorts`
+--
+
+CREATE TABLE sorts (
+  SortID bigint(20) NOT NULL auto_increment,
+  SortName varchar(50) default NULL,
+  PRIMARY KEY  (SortID),
+  UNIQUE KEY SortID (SortID)
+) ;
+
+--
+-- Dumping data for table `sorts`
+--
+
+--INSERT INTO sorts VALUES (1,'运动休闲');
+--INSERT INTO sorts VALUES (3,'箱包鞋帽');
+--INSERT INTO sorts VALUES (4,'家居化妆');
+--INSERT INTO sorts VALUES (5,'图书音像软件');
+--INSERT INTO sorts VALUES (6,'消费电子');
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE users (
+  UserID bigint(20) NOT NULL auto_increment,
+  UserName varchar(50) default NULL,
+  UserPassword varchar(50) default NULL,
+  RealName varchar(30) default NULL,
+  Telephone varchar(20) default NULL,
+  Email varchar(30) default NULL,
+  CreateTime datetime default '0000-00-00 00:00:00',
+  Role char(1) default '0',
+  PRIMARY KEY  (UserID),
+  UNIQUE KEY UserID (UserID)
+) ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO users VALUES (1,'admin','admin','admin','010-0','gfzhao05@sohu.com','2007-01-02 19:59:20','1');
+
+--
+-- Table structure for table `wares`
+--
+
+CREATE TABLE wares (
+  WareID bigint(20) NOT NULL auto_increment,
+  WareName varchar(100) default NULL,
+  Company varchar(100) default NULL,
+  Addr varchar(50) default NULL,
+  Price float(20,3) default NULL,
+  PicUrl varchar(30) default NULL,
+  SortID bigint(20) NOT NULL default '0',
+  Intro varchar(50),
+  CreateTime datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (WareID),
+  UNIQUE KEY WareID (WareID)
+) ;
+
+--
+-- Dumping data for table `wares`
+--
+
+
+
+
+--
+-- Dumping data for table `words`
+--
+
+
