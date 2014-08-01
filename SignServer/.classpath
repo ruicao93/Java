@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="F:/java/资料/疯狂JAVA讲义/疯狂java讲义第二版随书光盘代码/codes/13/mysql-connector-java-3.1.10-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
